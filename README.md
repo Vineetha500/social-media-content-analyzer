@@ -1,63 +1,84 @@
-📊 Social Media Content Analyzer
+# 📊 Social Media Content Analyzer
+
 A full-stack web application that analyzes social media content using AI/NLP techniques and provides meaningful insights such as sentiment, engagement-related analysis, content classification, and actionable recommendations.
 
-The project consists of a modern React + Vite frontend and a FastAPI + Python backend, communicating through REST APIs.
+The project consists of a modern **React + Vite frontend** and a **FastAPI + Python backend**, communicating through REST APIs.
 
-🚀 Introduction
-The Social Media Content Analyzer is designed to help users understand and analyze social media content quickly and efficiently.
+---
+
+## 🚀 Introduction
+
+The **Social Media Content Analyzer** is designed to help users understand and analyze social media content quickly and efficiently.
 
 Users can submit social media text through the web interface, and the application sends the content to the backend API for processing. The backend performs analysis and returns structured results that are displayed through an intuitive dashboard.
 
-🎯 Main Goals
-Analyze social media content automatically
-Identify sentiment and content characteristics
-Provide easy-to-understand analytical results
-Create a clean and responsive user interface
-Expose analysis functionality through REST APIs
-Maintain a scalable frontend/backend architecture
-Deploy the application as separate frontend and backend services
-✨ Features
-📝 Content Analysis
-Analyze user-provided social media text
-Process content through backend APIs
-Generate structured analytical results
-Display results in a user-friendly format
-🧠 AI/NLP Analysis
+### 🎯 Main Goals
+
+* Analyze social media content automatically
+* Identify sentiment and content characteristics
+* Provide easy-to-understand analytical results
+* Create a clean and responsive user interface
+* Expose analysis functionality through REST APIs
+* Maintain a scalable frontend/backend architecture
+* Deploy the application as separate frontend and backend services
+
+---
+
+# ✨ Features
+
+## 📝 Content Analysis
+
+* Analyze user-provided social media text
+* Process content through backend APIs
+* Generate structured analytical results
+* Display results in a user-friendly format
+
+## 🧠 AI/NLP Analysis
+
 The backend can perform NLP-based analysis such as:
 
-Sentiment analysis
-Content classification
-Keyword extraction
-Text preprocessing
-Content insights
-Engagement-oriented recommendations
-📊 Dashboard
+* Sentiment analysis
+* Content classification
+* Keyword extraction
+* Text preprocessing
+* Content insights
+* Engagement-oriented recommendations
+
+## 📊 Dashboard
+
 The frontend provides an interactive dashboard for displaying:
 
-Analysis results
-Sentiment information
-Content insights
-Important metrics
-Recommendations
-⚡ Fast API Backend
-The backend is developed using FastAPI, providing:
+* Analysis results
+* Sentiment information
+* Content insights
+* Important metrics
+* Recommendations
 
-REST API endpoints
-Automatic API documentation
-Request validation
-JSON responses
-High-performance asynchronous support
-🎨 Modern Frontend
+## ⚡ Fast API Backend
+
+The backend is developed using **FastAPI**, providing:
+
+* REST API endpoints
+* Automatic API documentation
+* Request validation
+* JSON responses
+* High-performance asynchronous support
+
+## 🎨 Modern Frontend
+
 The frontend is built using:
 
-React
-Vite
-JavaScript/TypeScript
-Modern component-based architecture
-Responsive UI
-🔗 Frontend–Backend Integration
+* React
+* Vite
+* JavaScript/TypeScript
+* Modern component-based architecture
+* Responsive UI
+
+## 🔗 Frontend–Backend Integration
+
 The frontend communicates with the backend using HTTP requests.
 
+```text
 React Frontend
       │
       │ HTTP Request
@@ -72,12 +93,22 @@ JSON Response
       │
       ▼
 React Dashboard
-🌐 Deployment Ready
+```
+
+## 🌐 Deployment Ready
+
 The application can be deployed using separate services:
 
+```text
 Frontend → Vercel
 Backend  → Render
-🏗️ System Architecture
+```
+
+---
+
+# 🏗️ System Architecture
+
+```text
                     ┌──────────────────────┐
                     │       USER           │
                     └──────────┬───────────┘
@@ -112,29 +143,42 @@ Backend  → Render
                     │   Frontend Results   │
                     │      Dashboard       │
                     └──────────────────────┘
-🧩 Project Architecture
-The application follows a client-server architecture.
+```
 
-Frontend
+---
+
+# 🧩 Project Architecture
+
+The application follows a **client-server architecture**.
+
+### Frontend
+
 Responsible for:
 
-User interaction
-Content input
-API communication
-Loading states
-Error handling
-Displaying analysis results
-Dashboard rendering
-Backend
+* User interaction
+* Content input
+* API communication
+* Loading states
+* Error handling
+* Displaying analysis results
+* Dashboard rendering
+
+### Backend
+
 Responsible for:
 
-API routing
-Request validation
-Text processing
-NLP/AI analysis
-Response generation
-Backend error handling
-📁 Project Structure
+* API routing
+* Request validation
+* Text processing
+* NLP/AI analysis
+* Response generation
+* Backend error handling
+
+---
+
+# 📁 Project Structure
+
+```text
 Social_Media_Analyzer/
 │
 ├── frontend/
@@ -171,9 +215,15 @@ Social_Media_Analyzer/
 ├── .gitignore
 ├── README.md
 └── ...
-Folder names may vary slightly depending on the final implementation.
+```
 
-🔄 Application Workflow
+> Folder names may vary slightly depending on the final implementation.
+
+---
+
+# 🔄 Application Workflow
+
+```text
 1. User opens the web application
               │
               ▼
@@ -202,138 +252,260 @@ Folder names may vary slightly depending on the final implementation.
               │
               ▼
 10. Dashboard displays the results
-🔌 API Architecture
+```
+
+---
+
+# 🔌 API Architecture
+
 The backend exposes RESTful API endpoints.
 
-Base URL
-Local Development
+## Base URL
+
+### Local Development
+
+```text
 http://localhost:8000
-API Documentation
+```
+
+### API Documentation
+
 FastAPI automatically provides:
 
+```text
 http://localhost:8000/docs
+```
+
 and:
 
+```text
 http://localhost:8000/redoc
-📡 API Request Flow
+```
+
+---
+
+# 📡 API Request Flow
+
 Example:
 
+```http
 POST /analyze
 Content-Type: application/json
+```
+
 Request:
 
+```json
 {
   "content": "This product is amazing and I really enjoyed using it!"
 }
+```
+
 Response:
 
+```json
 {
   "sentiment": "positive",
   "score": 0.95,
   "analysis": "The content expresses a positive opinion.",
   "recommendations": []
 }
-The exact endpoint names and response fields should match the implementation in the backend.
+```
 
-🛠️ Tech Stack
-Frontend
-Technology	Purpose
-React	UI development
-Vite	Frontend build tool
-JavaScript / TypeScript	Application logic
-HTML5	Structure
-CSS3	Styling
-Fetch / Axios	API communication
-Backend
-Technology	Purpose
-Python	Backend programming
-FastAPI	REST API framework
-Uvicorn	ASGI server
-Pydantic	Data validation
-python-dotenv	Environment variables
-NLP / AI libraries	Content analysis
-Development Tools
-Tool	Purpose
-Git	Version control
-GitHub	Source code hosting
-VS Code	Development
-Vercel	Frontend deployment
-Render	Backend deployment
-⚙️ Installation
-1. Clone the Repository
+> The exact endpoint names and response fields should match the implementation in the backend.
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+| Technology              | Purpose             |
+| ----------------------- | ------------------- |
+| React                   | UI development      |
+| Vite                    | Frontend build tool |
+| JavaScript / TypeScript | Application logic   |
+| HTML5                   | Structure           |
+| CSS3                    | Styling             |
+| Fetch / Axios           | API communication   |
+
+## Backend
+
+| Technology         | Purpose               |
+| ------------------ | --------------------- |
+| Python             | Backend programming   |
+| FastAPI            | REST API framework    |
+| Uvicorn            | ASGI server           |
+| Pydantic           | Data validation       |
+| python-dotenv      | Environment variables |
+| NLP / AI libraries | Content analysis      |
+
+## Development Tools
+
+| Tool    | Purpose             |
+| ------- | ------------------- |
+| Git     | Version control     |
+| GitHub  | Source code hosting |
+| VS Code | Development         |
+| Vercel  | Frontend deployment |
+| Render  | Backend deployment  |
+
+---
+
+# ⚙️ Installation
+
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/Vineetha500/Social_Media_Analyzer.git
+```
+
 Navigate into the project:
 
+```bash
 cd Social_Media_Analyzer
-🖥️ Frontend Setup
+```
+
+---
+
+# 🖥️ Frontend Setup
+
 Navigate to the frontend:
 
+```bash
 cd frontend
+```
+
 Install dependencies:
 
+```bash
 npm install
+```
+
 Start the development server:
 
+```bash
 npm run dev
+```
+
 The frontend will normally be available at:
 
+```text
 http://localhost:5173
-🐍 Backend Setup
+```
+
+---
+
+# 🐍 Backend Setup
+
 Open a new terminal and navigate to the backend:
 
+```bash
 cd backend
+```
+
 Create a virtual environment:
 
-Windows
+### Windows
+
+```bash
 python -m venv venv
+```
+
 Activate it:
 
+```bash
 venv\Scripts\activate
-macOS / Linux
+```
+
+### macOS / Linux
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
+
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
+
 Start the FastAPI server:
 
+```bash
 uvicorn app.main:app --reload
-If your main.py is located directly inside backend, use the command appropriate to your structure, for example:
+```
 
+If your `main.py` is located directly inside `backend`, use the command appropriate to your structure, for example:
+
+```bash
 uvicorn main:app --reload
+```
+
 Backend:
 
+```text
 http://localhost:8000
+```
+
 Swagger API documentation:
 
+```text
 http://localhost:8000/docs
-🔐 Environment Variables
+```
+
+---
+
+# 🔐 Environment Variables
+
 Environment variables should be used for configuration and secrets.
 
-Frontend .env
+## Frontend `.env`
+
 Example:
 
+```env
 VITE_API_URL=http://localhost:8000
+```
+
 For production:
 
+```env
 VITE_API_URL=https://your-backend-service.onrender.com
+```
+
 The frontend should access the variable through:
 
+```javascript
 import.meta.env.VITE_API_URL
-Backend .env
+```
+
+---
+
+## Backend `.env`
+
 Example:
 
+```env
 PORT=8000
 HOST=0.0.0.0
+```
+
 If your project uses external APIs or AI services, additional variables can be added:
 
+```env
 API_KEY=your_api_key
 MODEL_NAME=your_model
-⚠️ Important
+```
+
+### ⚠️ Important
+
 Never commit secrets to GitHub.
 
-Add environment files to .gitignore:
+Add environment files to `.gitignore`:
 
+```gitignore
 .env
 .env.*
 !.env.example
@@ -341,28 +513,51 @@ venv/
 __pycache__/
 node_modules/
 dist/
-🧪 Running the Complete Application Locally
+```
+
+---
+
+# 🧪 Running the Complete Application Locally
+
 You need two terminals.
 
-Terminal 1 — Backend
+### Terminal 1 — Backend
+
+```bash
 cd backend
 venv\Scripts\activate
 uvicorn app.main:app --reload
-Terminal 2 — Frontend
+```
+
+### Terminal 2 — Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
+
 Then open:
 
+```text
 http://localhost:5173
+```
+
 The frontend communicates with:
 
+```text
 http://localhost:8000
-🔗 Frontend–Backend Connection
+```
+
+---
+
+# 🔗 Frontend–Backend Connection
+
 The frontend uses the backend API URL from the environment variable.
 
 Example:
 
+```javascript
 const API_URL = import.meta.env.VITE_API_URL;
 
 fetch(`${API_URL}/analyze`, {
@@ -374,11 +569,17 @@ fetch(`${API_URL}/analyze`, {
         content: userContent
     })
 });
+```
+
 This allows the API URL to change between development and production without modifying application code.
 
-🌍 Deployment Architecture
+---
+
+# 🌍 Deployment Architecture
+
 The recommended deployment architecture is:
 
+```text
                          INTERNET
                             │
                             ▼
@@ -399,35 +600,67 @@ The recommended deployment architecture is:
                  ┌─────────────────────┐
                  │   NLP / AI Engine   │
                  └─────────────────────┘
-🚀 Frontend Deployment — Vercel
-Push the project to GitHub.
-Open Vercel.
-Import the GitHub repository.
-Select the frontend directory as the Root Directory if the frontend is inside frontend/.
-Configure the build settings.
-Add the production environment variable:
+```
+
+---
+
+# 🚀 Frontend Deployment — Vercel
+
+1. Push the project to GitHub.
+2. Open Vercel.
+3. Import the GitHub repository.
+4. Select the frontend directory as the Root Directory if the frontend is inside `frontend/`.
+5. Configure the build settings.
+6. Add the production environment variable:
+
+```text
 VITE_API_URL=https://your-backend-url.onrender.com
-Deploy the application.
+```
+
+7. Deploy the application.
+
 After deployment, Vercel provides a public URL such as:
 
+```text
 https://your-project.vercel.app
-🚀 Backend Deployment — Render
-Push the backend code to GitHub.
-Create a new Web Service on Render.
-Select the GitHub repository.
-Configure the backend directory if required.
-Install dependencies using:
+```
+
+---
+
+# 🚀 Backend Deployment — Render
+
+1. Push the backend code to GitHub.
+2. Create a new Web Service on Render.
+3. Select the GitHub repository.
+4. Configure the backend directory if required.
+5. Install dependencies using:
+
+```bash
 pip install -r requirements.txt
-Configure the start command.
+```
+
+6. Configure the start command.
+
 Example:
 
+```bash
 uvicorn app.main:app --host 0.0.0.0 --port $PORT
-Add required environment variables.
-Deploy the service.
+```
+
+7. Add required environment variables.
+8. Deploy the service.
+
 The backend will receive a public URL similar to:
 
+```text
 https://your-backend-service.onrender.com
-🔄 Production Request Flow
+```
+
+---
+
+# 🔄 Production Request Flow
+
+```text
 User
  │
  ▼
@@ -448,154 +681,279 @@ Vercel Frontend
  │
  ▼
 User Dashboard
-🛡️ Security Considerations
-Never expose API keys in frontend source code.
-Store secrets in environment variables.
-Do not commit .env files.
-Validate API requests on the backend.
-Implement proper CORS configuration.
-Sanitize user input where necessary.
-Use HTTPS in production.
-Keep dependencies updated.
-Avoid storing unnecessary user information.
-🧪 Testing
+```
+
+---
+
+# 🛡️ Security Considerations
+
+* Never expose API keys in frontend source code.
+* Store secrets in environment variables.
+* Do not commit `.env` files.
+* Validate API requests on the backend.
+* Implement proper CORS configuration.
+* Sanitize user input where necessary.
+* Use HTTPS in production.
+* Keep dependencies updated.
+* Avoid storing unnecessary user information.
+
+---
+
+# 🧪 Testing
+
 Before deployment, verify:
 
-Frontend
+### Frontend
+
+```bash
 npm run dev
+```
+
 Check:
 
-UI loads correctly
-Input fields work
-API requests are sent
-Results are displayed
-Error states are handled
-Backend
+* UI loads correctly
+* Input fields work
+* API requests are sent
+* Results are displayed
+* Error states are handled
+
+### Backend
+
+```bash
 uvicorn app.main:app --reload
+```
+
 Open:
 
+```text
 http://localhost:8000/docs
+```
+
 Test the API endpoints using Swagger UI.
 
-🐛 Troubleshooting
-Failed to Fetch
+---
+
+# 🐛 Troubleshooting
+
+## Failed to Fetch
+
 If the frontend displays:
 
+```text
 Failed to fetch
+```
+
 check:
 
-Backend is running.
-VITE_API_URL is correct.
-The API endpoint exists.
-CORS is configured correctly.
-The backend URL is accessible publicly.
-The frontend was redeployed after changing environment variables.
-Backend URL Returns 404
+1. Backend is running.
+2. `VITE_API_URL` is correct.
+3. The API endpoint exists.
+4. CORS is configured correctly.
+5. The backend URL is accessible publicly.
+6. The frontend was redeployed after changing environment variables.
+
+---
+
+## Backend URL Returns 404
+
 If:
 
+```text
 https://your-backend.onrender.com/
-returns 404, this does not necessarily mean the backend is broken.
+```
+
+returns `404`, this does not necessarily mean the backend is broken.
 
 Try:
 
+```text
 https://your-backend.onrender.com/docs
+```
+
 and verify that the API documentation loads.
 
 Also check the actual route defined by FastAPI.
 
-📌 Git Commands
+---
+
+# 📌 Git Commands
+
 Initialize Git:
 
+```bash
 git init
+```
+
 Add files:
 
+```bash
 git add .
+```
+
 Commit:
 
+```bash
 git commit -m "Initial project commit"
+```
+
 Connect GitHub repository:
 
+```bash
 git remote add origin https://github.com/Vineetha500/Social_Media_Analyzer.git
+```
+
 Push:
 
+```bash
 git branch -M main
 git push -u origin main
+```
+
 If GitHub already contains commits:
 
+```bash
 git pull origin main --rebase
 git push -u origin main
-📈 Future Enhancements
+```
+
+---
+
+# 📈 Future Enhancements
+
 Possible future improvements include:
 
-👤 User authentication
-📊 Advanced analytics dashboard
-📈 Historical analysis
-📅 Time-based sentiment tracking
-🔍 Advanced keyword extraction
-#️⃣ Hashtag analysis
-📱 Multi-platform social media analysis
-🤖 Improved AI-generated recommendations
-📥 Export reports as PDF/CSV
-📊 Interactive charts
-🗄️ Database integration
-⚡ Background processing for large datasets
-🔔 Alerts and notifications
-🌐 Multi-language content analysis
-🔐 Role-based access control
-☁️ Cloud-based data storage
-🎯 Use Cases
+* 👤 User authentication
+* 📊 Advanced analytics dashboard
+* 📈 Historical analysis
+* 📅 Time-based sentiment tracking
+* 🔍 Advanced keyword extraction
+* #️⃣ Hashtag analysis
+* 📱 Multi-platform social media analysis
+* 🤖 Improved AI-generated recommendations
+* 📥 Export reports as PDF/CSV
+* 📊 Interactive charts
+* 🗄️ Database integration
+* ⚡ Background processing for large datasets
+* 🔔 Alerts and notifications
+* 🌐 Multi-language content analysis
+* 🔐 Role-based access control
+* ☁️ Cloud-based data storage
+
+---
+
+# 🎯 Use Cases
+
 The application can be useful for:
 
-Social media managers
-Content creators
-Digital marketing teams
-Businesses
-Researchers
-Brand monitoring
-Customer feedback analysis
-Marketing analytics
-Content strategy
-💡 Key Advantages
-Simple
+* Social media managers
+* Content creators
+* Digital marketing teams
+* Businesses
+* Researchers
+* Brand monitoring
+* Customer feedback analysis
+* Marketing analytics
+* Content strategy
+
+---
+
+# 💡 Key Advantages
+
+### Simple
+
 Users can submit content without needing technical knowledge.
 
-Fast
+### Fast
+
 FastAPI provides a lightweight and high-performance API layer.
 
-Scalable
+### Scalable
+
 The frontend and backend are separated, allowing each service to scale independently.
 
-Maintainable
+### Maintainable
+
 The project follows a modular frontend/backend architecture.
 
-Deployment Friendly
+### Deployment Friendly
+
 The application can be deployed using:
 
+```text
 Frontend → Vercel
 Backend  → Render
-📚 API Documentation
+```
+
+---
+
+# 📚 API Documentation
+
 During development, FastAPI provides interactive documentation:
 
+```text
 http://localhost:8000/docs
+```
+
 ReDoc:
 
+```text
 http://localhost:8000/redoc
+```
+
 These interfaces can be used to inspect and test available API endpoints.
 
-👩‍💻 Author
-Vineetha
+---
+
+# 📋 Project Checklist
+
+```text
+[✓] React frontend
+[✓] Vite development environment
+[✓] FastAPI backend
+[✓] REST API architecture
+[✓] NLP / AI content analysis
+[✓] Frontend-backend integration
+[✓] Environment variable support
+[✓] Git/GitHub version control
+[✓] Vercel frontend deployment support
+[✓] Render backend deployment support
+[✓] API documentation with FastAPI
+[ ] Advanced analytics
+[ ] Authentication
+[ ] Database integration
+[ ] Report export
+[ ] Multi-platform analysis
+```
+
+---
+
+# 👩‍💻 Author
+
+**Vineetha**
 
 GitHub:
 
+```text
 https://github.com/Vineetha500
+```
+
 Project Repository:
 
+```text
 https://github.com/Vineetha500/Social_Media_Analyzer
-📄 License
+```
+
+---
+
+# 📄 License
+
 This project is intended for educational, development, and demonstration purposes.
 
-⭐ Conclusion
-The Social Media Content Analyzer demonstrates a complete full-stack application architecture by combining a modern React frontend with a Python FastAPI backend.
+---
+
+# ⭐ Conclusion
+
+The **Social Media Content Analyzer** demonstrates a complete full-stack application architecture by combining a modern React frontend with a Python FastAPI backend.
 
 It provides a foundation for analyzing social media content using AI/NLP techniques while maintaining a clean separation between the user interface, API layer, and analysis engine.
 
